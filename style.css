@@ -240,6 +240,14 @@ h2{
   clip-path: polygon(-42% 0,50% 91%, 142% 0);
   animation: cair 20s linear infinite;
 }
+.seta::before{
+    content: "\002B06";
+    font-size: 60px;
+    margin-right: 8px;
+    font-family:'Times New Roman', Times, serif;
+
+    padding-left: 84px;
+}
 
 
 
