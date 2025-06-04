@@ -1,5 +1,45 @@
 @charset "UTF-8";
 
+@keyframes flutuar{
+    
+    0%{
+        transform:translateY(0px);
+    }
+    
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes expand{
+    0%{
+        width: 180px;
+    }
+
+    50%{
+        width: 165px;
+    }
+    100%{
+        width: 180px;
+    }
+}
+
+@keyframes cair{
+    0%{
+    transform: translateY(-10vh);
+    opacity: 0.8;
+    }
+    100%{
+    transform: translateY(110vh);
+    opacity: 0.8;
+  }
+
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -10,41 +50,58 @@ main{
     margin: 0%;
     min-height: 100vh;
     width: 100vw;
-    background-color: pink;
+    background-color: #F2DCE0;
     
     position: relative;
 }
 
-#container{
-    padding: 0%;
-    margin: 0%;
-    max-height: 200px;
-    max-width: 160px;
-    height: 18vh;
-    width: 40vw;
-    background-color:black;
-    
+.container-wrapper{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#container{
+    padding: 0%;
+    margin: 0%;
+    max-height: 220px;
+    max-width: 200px;
+    height: 18vh;
+    width: 40vw;
+    
+    animation: flutuar 2.5s ease-in-out infinite;
 }
 #tab1{
     padding: 0%;
     margin: 0%;
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #c27b9b;
     clip-path: polygon(50% 0, 100% 45%, 100% 100%, 0 100%, 0 45%);
 
     position: absolute;
 }
+#carta{
+    
+    padding: 0%;
+    margin: 0%;
+    height: 50%;
+    width: 90%;
+    background-color: #d9cbce;
+    text-align: center;
+    color: #bd7a85;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 #tab2{
     padding: 0%;
     margin: 0%;
     height: 100%;
     width: 100%;
-    background-color: brown;
+    background-color: #D98997;
     clip-path: polygon(100% 45%, 0% 100%, 100% 100%); 
     
     position: absolute;
@@ -54,9 +111,136 @@ main{
     margin: 0%;
     height: 100%;
     width: 100%;
-    background-color: aqua;
+    background-color: #e197a4;
     clip-path: polygon(0 45%, 0% 100%, 100% 100%);
 
     position: absolute;
 
 }
+.shadow-wrapper{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#shadow{
+    padding: 0%;
+    margin: 0px;
+    height: 10px;
+    width: 180px;
+    background-color: #a62d4350;
+    border-radius: 42%;   
+    
+    animation: expand 2.5s ease-in-out infinite;
+}
+#clickmsg{
+    height: 20px;
+    width: 200px;
+    /*background-color: black;*/
+    
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+}
+
+h2{
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.hearts0{
+  --c: #A62D43;
+  display: inline-block;
+  margin: 0px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-image: radial-gradient(var(--c) 69%,#0000 70%) 84.5%/50%;
+  clip-path: polygon(-42% 0,50% 91%, 142% 0);
+
+  animation: cair 8s linear infinite;
+}
+
+.hearts1{
+  --c: #A62D43;
+  display: inline-block;
+  margin: 0px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-image: radial-gradient(var(--c) 69%,#0000 70%) 84.5%/50%;
+  clip-path: polygon(-42% 0,50% 91%, 142% 0);
+  animation: cair 10s linear infinite;
+
+}
+
+.hearts2{
+  --c: #A62D43;
+  display: inline-block;
+  margin: 0px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-image: radial-gradient(var(--c) 69%,#0000 70%) 84.5%/50%;
+  clip-path: polygon(-42% 0,50% 91%, 142% 0);
+  animation: cair 5s linear infinite;
+}
+.hearts3{
+  --c: #A62D43;
+  display: inline-block;
+  margin: 0%;
+  width: 40px;
+  aspect-ratio: 1;
+  border-image: radial-gradient(var(--c) 69%,#0000 70%) 84.5%/50%;
+  clip-path: polygon(-42% 0,50% 91%, 142% 0);
+  animation: cair 7s linear infinite;
+}
+.hearts4{
+  --c: #A62D43;
+  display: inline-block;
+  margin: 0%;
+  width: 40px;
+  aspect-ratio: 1;
+  border-image: radial-gradient(var(--c) 69%,#0000 70%) 84.5%/50%;
+  clip-path: polygon(-42% 0,50% 91%, 142% 0);
+  animation: cair 14s linear infinite;
+}
+.hearts5{
+  --c: #A62D43;
+  display: inline-block;
+  margin: 0px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-image: radial-gradient(var(--c) 69%,#0000 70%) 84.5%/50%;
+  clip-path: polygon(-42% 0,50% 91%, 142% 0);
+  animation: cair 6s linear infinite;
+}
+.hearts6{
+  --c: #A62D43;
+  display: inline-block;
+  margin: 0px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-image: radial-gradient(var(--c) 69%,#0000 70%) 84.5%/50%;
+  clip-path: polygon(-42% 0,50% 91%, 142% 0);
+  animation: cair 17s linear infinite;
+}
+.hearts7{
+  --c: #A62D43;
+  display: inline-block;
+  margin: 0px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-image: radial-gradient(var(--c) 69%,#0000 70%) 84.5%/50%;
+  clip-path: polygon(-42% 0,50% 91%, 142% 0);
+  animation: cair 20s linear infinite;
+}
+
+
+
+
