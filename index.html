@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carta Noivado</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>
-        <div class="hearts0"></div>
-        <div class="hearts1"></div>
-        <div class="hearts2"></div>
-        <div class="hearts3"></div>
-        <div class="hearts4"></div>
-        <div class="hearts5"></div>
-        <div class="hearts6"></div>
-        <div class="hearts7"></div>
-        <div class="hearts9"></div>
-        <div class="container-wrapper">
-            <div id="container">
-                <div id="tab1">
-                </div>
-                 <div id="carta">
-                    _____________<br>
-                    _____________
-                </div>
-                <div id="tab2">
-                </div>
-                <div id="tab3">          
-                </div>
-            </div>
-            <div class="shadow-wrapper">
-                <div id="shadow">
-                </div>
-            </div>
-        </div> 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="tela-inicial">
+      <div class="hearts0"></div>
+      <div class="hearts1"></div>
+      <div class="hearts2"></div>
+      <div class="hearts3"></div>
+      <div class="hearts4"></div>
+      <div class="hearts5"></div>
+      <div class="hearts6"></div>
+      <div class="hearts7"></div>
+      <div class="hearts9"></div>
+      <div>
+        <h3>Feliz 1 ano juntos!!!</h3>
+      </div>
+      <div class="container-wrapper">
+        <div id="container">
+          <div id="tab1"></div>
+          <div id="carta">
+            _____________<br />
+            _____________
+          </div>
+          <div id="tab2"></div>
+          <div id="tab3"></div>
+        </div>
+        <div class="shadow-wrapper">
+          <div id="shadow"></div>
+        </div>
+      </div>
+
+      <div class="clickmsg-wrapper">
         <section id="clickmsg">
-            <p class="seta"></p>
-            <h2>
-                APERTE
-            </h2>
+          <p class="seta"></p>
+          <h2>Aperte</h2>
         </section>
+      </div>
     </main>
-</body>
+
+    <div id="folha" class="oculto">
+      <div id="title">
+        quem ler é gay pra caralho
+      </div>
+      <iframe src="carta.html" frameborder="0"></iframe>
+    </div>
+    <script>
+      document.getElementById("container").addEventListener("click", () => {
+        document.getElementById("tela-inicial").classList.add("fade-out");
+
+        setTimeout(() => {
+          const folha = document.getElementById("folha");
+          folha.classList.remove("oculto");
+          folha.classList.add("mostrar");
+        }, 1000); // espera o fade-out acabar
+      });
+    </script>
+  </body>
 </html>
