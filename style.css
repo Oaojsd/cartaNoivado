@@ -381,7 +381,9 @@ h3 {
     clip-path: polygon(-42% 0, 50% 91%, 142% 0);
     animation: cair 20s linear infinite;
 }
-
+p.seta{
+   text-align: center;
+}
 .seta::before {
     content: "\002B06";
     font-size: 60px;
@@ -389,5 +391,4 @@ h3 {
     font-family: 'Times New Roman', Times, serif;
     color: #c27b9b;
 
-    padding-left: 40%;
 }
