@@ -385,9 +385,9 @@ h3 {
 .seta::before {
     content: "\002B06";
     font-size: 60px;
-    margin-right: 8px;
+    margin-right: 10px;
     font-family: 'Times New Roman', Times, serif;
     color: #c27b9b;
 
-    padding-left: 43%;
+    padding-left: 40%;
 }
